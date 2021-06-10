@@ -1,26 +1,26 @@
-<template>
+    <template>
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <br>
-                    <hr>
-                    <br>
-                    <div class="panel-heading">Vuejs also welcomes you!</div>
-                    <br>
-                    <div class="panel-body">
-                        This is vue code being loaded!
-                    </div>
-                </div>
-            </div>
+            <list-transactions></list-transactions>
+           <list-individual-transations></list-individual-transations>
+          <list-sacco-transactions></list-sacco-transactions>
         </div>
     </div>
 </template>
 
 <script>
+import ListTransactions from './ListTransactions'
+import ListIndividualTransations from './ListIndividualTransations'
+import ListSaccoTransactions from './ListSaccoTransactions'
+
     export default {
         mounted() {
             console.log('Component mounted.')
-        }
+        },
+        components: {
+                ListTransactions,
+                ListIndividualTransations,
+                ListSaccoTransactions
+        },
     }
 </script>

@@ -1,3 +1,9 @@
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Import Bootstrap an BootstrapVue CSS files 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -15,7 +21,11 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+// Make BootstrapVue available throughout the project
+Vue.use(BootstrapVue)
+
 
 console.log('LOADING VUE');
 
